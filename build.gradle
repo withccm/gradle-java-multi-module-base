@@ -38,6 +38,11 @@ subprojects {
 
         testImplementation 'org.assertj:assertj-core:3.16.1'
         testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+        implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+        runtimeOnly 'mysql:mysql-connector-java'
+
+        implementation 'org.springdoc:springdoc-openapi-ui:1.6.4'
     }
 
     test {

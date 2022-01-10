@@ -1,0 +1,31 @@
+---
+spring:
+  profiles: local, dev
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mytest?useUnicode=true&characterEncoding=utf8
+    username: github
+    password: test1234
+    hikari:
+      connectionTimeout : 30000
+      maximumPoolSize : 5
+      maxLifetime : 1800000
+      poolName : HikariCP
+      readOnly : false
+      connectionTestQuery : SELECT 1
+
+---
+spring:
+  profiles: real
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/mytest?useUnicode=true&characterEncoding=utf8
+    username: github
+    password: test1234
+    hikari:
+      connectionTimeout : 30000
+      maximumPoolSize : 5
+      maxLifetime : 1800000
+      poolName : HikariCP
+      readOnly : false
+      connectionTestQuery : SELECT 1
